@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+gunicorn = "*"
+flake8 = "==5.0.4"
+coverage = "*"
+coveralls = "==1.11.1"
+django = "==3.2.22"
+black = "==23.3.0"
+urllib3 = "==1.26.6"
+pyyaml = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"
