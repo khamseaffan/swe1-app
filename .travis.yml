@@ -4,17 +4,21 @@ python:
 
 cache: pip
 
-
 install:
   - pip install -r requirements.txt  
 
 before_script:
   - python manage.py migrate
 
+script:
+    - python manage.py test
+
 # after_script:
 #   - coveralls
 
-script:
+
+
+# script:
 #   - black --check .  
 #   - flake8 .
-  - coverage run --source=mysite,polls manage.py test
+#   - coverage run --source=mysite,polls manage.py test
