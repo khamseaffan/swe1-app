@@ -1,11 +1,20 @@
 language: python
-
 python:
-    - "3.8"
-env:
-    - SECRET_KEY='CITEST'
+  - "3.8"  
+
+cache: pip
+
 install:
-    - pipenv install
+  - pip install -r requirements.txt  
+  # - pip install python==3.8
+
+before_script:
+  - python manage.py migrate
+
+after_script:
+  - coveralls
 
 script:
-    - python manage.py test
+  - black --check .  
+  - flake8 .
+  - coverage run --source=mysite,polls manage.py test
