@@ -1,0 +1,11 @@
+language: python
+
+python:
+    - "3.8"
+env:
+    - SECRET_KEY='CITEST'
+install:
+    - pipenv install
+
+script:
+    - python manage.py test
