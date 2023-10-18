@@ -23,7 +23,7 @@ deploy:
   secret_access_key:
     secure: $SECRETACCESSKEYID
   region: "us-west-2"
-  app: "eqasite"
+  app: "qasite"
   env: "qasite-env"
   bucket_name: "elasticbeanstalk-us-west-2-004692833247"
   bucket_path: "qasite/"
