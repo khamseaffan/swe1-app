@@ -9,7 +9,7 @@ install:
 
 
 after_script:
-  - python -m coveralls
+  - coveralls
 
 script:
   - black --check .  
