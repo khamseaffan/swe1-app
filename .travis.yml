@@ -14,6 +14,18 @@ after_script:
 
 
 script:
-#   - black --check .  
-#   - flake8 .
+  - black --check .  
+  - flake8 .
   - coverage run --source=mysite,polls manage.py test
+
+deploy:
+  provider: elasticbeanstalk
+  access_key_id:
+    secure: $AWSACCESSKEYID
+  secret_access_key:
+    secure: $SECRETACCESSKEYID
+  region: "us-west-2"
+  app: "eqasite"
+  env: "qasite-env"
+  bucket_name: "s3://elasticbeanstalk-us-west-2-004692833247/qasite/"
+  
