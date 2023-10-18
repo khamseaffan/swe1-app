@@ -9,13 +9,11 @@ install:
 
 
 after_script:
-  - coveralls
-
-
+  - python -m coveralls
 
 script:
   - black --check .  
-  - flake8 .
+  - flake8 --exclude=migrations.
   - coverage run --source=mysite,polls manage.py test
 
 deploy:
