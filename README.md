@@ -5,4 +5,4 @@
 
 A simple polls web application using Django and deployed on AWS. The application is currently live at: http://qasite-env.eba-iic335ub.us-west-2.elasticbeanstalk.com/polls/
 
-by Affan Khamse - ak10529
+by Affan Khamse - ak10529 
