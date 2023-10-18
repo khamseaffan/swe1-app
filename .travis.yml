@@ -18,10 +18,8 @@ script:
 
 deploy:
   provider: elasticbeanstalk
-  access_key_id:
-    secure: $AWSACCESSKEYID
-  secret_access_key:
-    secure: $SECRETACCESSKEYID
+  access_key_id: $AWSACCESSKEYID
+  secret_access_key: $SECRETACCESSKEYID
   region: "us-west-2"
   app: "qasite"
   env: "qasite-env"
