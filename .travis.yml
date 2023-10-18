@@ -27,5 +27,8 @@ deploy:
   region: "us-west-2"
   app: "eqasite"
   env: "qasite-env"
-  bucket_name: "s3://elasticbeanstalk-us-west-2-004692833247/qasite/"
+  bucket_name: "elasticbeanstalk-us-west-2-004692833247"
+  bucket_path: "qasite/"
+  on:
+    branch: main
   
