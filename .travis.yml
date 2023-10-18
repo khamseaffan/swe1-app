@@ -14,8 +14,8 @@ after_script:
 
 
 script:
-#   - black --check .  
-#   - flake8 .
+  - black --check .  
+  - flake8 .
   - coverage run --source=mysite,polls manage.py test
 
 deploy:
